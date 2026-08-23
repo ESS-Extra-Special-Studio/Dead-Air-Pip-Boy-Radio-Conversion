@@ -1,0 +1,51 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+displayURL = "https://extraspecialstudio.co.uk"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+displayTest = "IGNORE_ALL_VERSION"
+description = '''${mod_description}'''
+
+[[dependencies."${mod_id}"]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+# Hard deps: Extra Special Core UI + GeckoLib. Dead Air is optional (RADIO tab).
+[[dependencies."${mod_id}"]]
+modId = "dead_air"
+mandatory = false
+versionRange = "[2.1.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "extraspecialcore"
+mandatory = true
+versionRange = "${esc_version_range}"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "geckolib"
+mandatory = true
+versionRange = "[4.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "dead_air_pip_boy_radio_conversion.mixins.json"

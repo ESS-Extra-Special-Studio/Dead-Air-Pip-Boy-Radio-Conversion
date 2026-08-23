@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dead_air_pip_boy_radio_conversion:pip_radio_t1_light_green",
+    "dead_air_pip_boy_radio_conversion:pip_radio_t1_dark_green",
+    "dead_air_pip_boy_radio_conversion:pip_radio_t1_grey",
+    "dead_air_pip_boy_radio_conversion:pip_radio_t1_dark_blue",
+    "dead_air_pip_boy_radio_conversion:pip_radio_t1_dark_brown"
+  ]
+}

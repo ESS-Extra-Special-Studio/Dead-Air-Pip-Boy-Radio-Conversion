@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "dead_air_pip_boy_radio_conversion.refmap.json",
+  "plugin": "uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.mixin.PipMixinPlugin",
+  "client": [
+    "PlayerRendererMixin",
+    "PlayerModelMixin",
+    "HumanoidModelMixin",
+    "ItemInHandLayerMixin",
+    "TaczRenderHelperMixin",
+    "TaczHumanoidOffhandRenderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

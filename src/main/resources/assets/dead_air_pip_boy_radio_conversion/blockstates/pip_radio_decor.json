@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "dead_air_pip_boy_radio_conversion:block/pip_radio_decor" },
+    "facing=south": { "model": "dead_air_pip_boy_radio_conversion:block/pip_radio_decor", "y": 180 },
+    "facing=west":  { "model": "dead_air_pip_boy_radio_conversion:block/pip_radio_decor", "y": 270 },
+    "facing=east":  { "model": "dead_air_pip_boy_radio_conversion:block/pip_radio_decor", "y": 90 }
+  }
+}
