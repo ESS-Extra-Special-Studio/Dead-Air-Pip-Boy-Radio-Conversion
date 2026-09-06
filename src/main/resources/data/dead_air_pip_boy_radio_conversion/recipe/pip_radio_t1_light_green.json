@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "LRL",
+    "RNR",
+    "LRL"
+  ],
+  "key": {
+    "L": { "item": "minecraft:leather" },
+    "R": { "item": "minecraft:redstone" },
+    "N": { "item": "dead_air:static_note" }
+  },
+  "result": { "id": "dead_air_pip_boy_radio_conversion:pip_radio_t1_light_green", "count": 1 }
+}

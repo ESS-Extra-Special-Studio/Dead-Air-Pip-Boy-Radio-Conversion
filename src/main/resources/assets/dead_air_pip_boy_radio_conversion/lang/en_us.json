@@ -1,0 +1,14 @@
+{
+  "itemGroup.dead_air_pip_boy_radio_conversion.main": "Pip-Boy",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t1_light_green": "T1 Pip-Boy (Light Green)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t2_light_green": "T2 Pip-Boy (Light Green)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t1_dark_green": "T1 Pip-Boy (Dark Green)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t2_dark_green": "T2 Pip-Boy (Dark Green)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t1_grey": "T1 Pip-Boy (Grey)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t2_grey": "T2 Pip-Boy (Grey)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t1_dark_blue": "T1 Pip-Boy (Dark Blue)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t2_dark_blue": "T2 Pip-Boy (Dark Blue)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t1_dark_brown": "T1 Pip-Boy (Dark Brown)",
+  "item.dead_air_pip_boy_radio_conversion.pip_radio_t2_dark_brown": "T2 Pip-Boy (Dark Brown)",
+  "block.dead_air_pip_boy_radio_conversion.pip_radio_decor": "Pip-Boy (Decoration)"
+}

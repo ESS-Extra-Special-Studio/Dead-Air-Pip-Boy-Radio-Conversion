@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "GRG",
+    "IWI",
+    "III"
+  ],
+  "key": {
+    "G": { "item": "minecraft:gold_ingot" },
+    "R": { "item": "dead_air:dimensional_relay" },
+    "I": { "item": "minecraft:iron_ingot" },
+    "W": { "item": "dead_air_pip_boy_radio_conversion:pip_radio_t1_dark_green" }
+  },
+  "result": { "id": "dead_air_pip_boy_radio_conversion:pip_radio_t2_dark_green", "count": 1 }
+}

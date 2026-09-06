@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "dead_air_pip_boy_radio_conversion:item/pip_radio_light_green"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    { "tag": "dead_air_pip_boy_radio_conversion:pip_radio_t2" },
+    { "item": "minecraft:green_dye" }
+  ],
+  "result": { "id": "dead_air_pip_boy_radio_conversion:pip_radio_t2_dark_green", "count": 1 }
+}
