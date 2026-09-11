@@ -23,8 +23,7 @@ try {
 
 # Copy into common CurseForge resourcepacks folders when present
 $targets = @(
-  "$env:USERPROFILE\curseforge\minecraft\Instances\C.Ideas\resourcepacks",
-  "$env:USERPROFILE\curseforge\minecraft\Instances\dead air tests\resourcepacks"
+  "$env:USERPROFILE\curseforge\minecraft\Instances\C.Ideas\resourcepacks"
 )
 foreach ($t in $targets) {
   if (Test-Path $t) {

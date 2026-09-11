@@ -196,7 +196,6 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 def modpackDirs = [
-    file("${System.getProperty('user.home')}/curseforge/minecraft/Instances/dead air tests/mods"),
     file("${System.getProperty('user.home')}/curseforge/minecraft/Instances/C.Ideas/mods")
 ]
 
