@@ -43,7 +43,7 @@ public class Dead_air_pip_boy_radio_conversion {
                     entryCl.getConstructor(ResourceLocation.class, int.class, int.class);
                 // Same cost as Dead Air T1.Radio: 5 points, stack of 1 (default Light Green).
                 addons.add(entryCtor.newInstance(
-                    ResourceLocation.fromNamespaceAndPath(MODID, PipRadioSkin.LIGHT_GREEN.itemId(false)),
+                    new ResourceLocation(MODID, PipRadioSkin.LIGHT_GREEN.itemId(false)),
                     5,
                     1));
                 catalog.getMethod("invalidate").invoke(null);

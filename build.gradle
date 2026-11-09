@@ -64,7 +64,7 @@ dependencies {
     implementation "uk.co.extraspecialstudio:extraspeciallib:${esl_version}"
     implementation "uk.co.extraspecialstudio:extraspecialcore:${esc_version}"
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
-    compileOnly files('libs/dead_air-2.1.3+1.21.1-neoforge.jar')
+    compileOnly files('libs/dead_air-3.0.2+1.20.6-neoforge.jar')
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
@@ -97,7 +97,7 @@ tasks.register('copyToNeoForgeTestPack') {
     dependsOn 'jar'
     doLast {
         def jar = tasks.named('jar', Jar).get().archiveFile.get().asFile
-        def dest = file("${System.getProperty('user.home')}/curseforge/minecraft/Instances/NEOFORGE 1.21.1 TESTS/mods")
+        def dest = file("${System.getProperty('user.home')}/curseforge/minecraft/Instances/ESS SMK DA 1.20.6-neoforge/mods")
         if (dest.exists()) {
             dest.listFiles({ f -> f.name.startsWith('dead_air_pip_boy_radio_conversion-') && f.name.endsWith('.jar') } as FileFilter)?.each { it.delete() }
             copy { from jar; into dest }

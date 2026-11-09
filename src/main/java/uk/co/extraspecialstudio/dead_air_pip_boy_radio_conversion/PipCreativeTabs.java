@@ -16,7 +16,7 @@ public final class PipCreativeTabs {
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Dead_air_pip_boy_radio_conversion.MODID);
 
     private static final ResourceLocation DEAD_AIR_TAB_ID =
-        ResourceLocation.fromNamespaceAndPath("dead_air", "dead_air");
+        new ResourceLocation("dead_air", "dead_air");
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PIP_RADIO_TAB = REGISTER.register(
         "pip_radio",

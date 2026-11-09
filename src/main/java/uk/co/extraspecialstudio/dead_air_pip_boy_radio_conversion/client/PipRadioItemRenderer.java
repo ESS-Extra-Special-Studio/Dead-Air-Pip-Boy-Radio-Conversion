@@ -90,11 +90,14 @@ public class PipRadioItemRenderer extends GeoItemRenderer<PipRadioItem> {
         float partialTick,
         int packedLight,
         int packedOverlay,
-        int packedColor
+        float red,
+        float green,
+        float blue,
+        float alpha
     ) {
         super.preRender(
             poseStack, animatable, model, bufferSource, buffer,
-            isReRender, partialTick, packedLight, packedOverlay, packedColor
+            isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha
         );
         if (Boolean.TRUE.equals(DECOR_MODE.get())) {
             return;

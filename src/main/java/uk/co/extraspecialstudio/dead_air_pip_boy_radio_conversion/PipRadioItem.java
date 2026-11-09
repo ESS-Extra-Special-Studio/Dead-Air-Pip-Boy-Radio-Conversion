@@ -80,15 +80,15 @@ public class PipRadioItem extends Item implements GeoItem {
     }
 
     public ResourceLocation getGeoModelResource() {
-        return ResourceLocation.fromNamespaceAndPath(Dead_air_pip_boy_radio_conversion.MODID, GEO);
+        return new ResourceLocation(Dead_air_pip_boy_radio_conversion.MODID, GEO);
     }
 
     public ResourceLocation getGeoTextureResource() {
-        return ResourceLocation.fromNamespaceAndPath(Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
+        return new ResourceLocation(Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
     }
 
     public ResourceLocation getGeoAnimationResource() {
-        return ResourceLocation.fromNamespaceAndPath(Dead_air_pip_boy_radio_conversion.MODID, ANIM);
+        return new ResourceLocation(Dead_air_pip_boy_radio_conversion.MODID, ANIM);
     }
 
     /**

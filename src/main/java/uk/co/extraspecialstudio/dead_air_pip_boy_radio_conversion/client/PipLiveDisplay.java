@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Pip-owned on-model CRT: the Fallout mini character GUI (STAT silhouette).
- * Formerly painted only via Dead Air {@code RadioLiveDisplay} idle painters — that path is gone.
+ * Formerly painted only via Dead Air {@code WalkieTalkieLiveDisplay} idle painters — that path is gone.
  * Dead Air may still paint radio HUD while music plays ({@code PipDeadAirLcd}).
  */
 public final class PipLiveDisplay {
@@ -73,12 +73,12 @@ public final class PipLiveDisplay {
     }
 
     private static ResourceLocation base(PipRadioSkin skin) {
-        return ResourceLocation.fromNamespaceAndPath(
+        return new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
     }
 
     private static ResourceLocation live(String path) {
-        return ResourceLocation.fromNamespaceAndPath(
+        return new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/" + path);
     }
 

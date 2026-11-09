@@ -15,7 +15,7 @@ import net.neoforged.neoforge.event.LootTableLoadEvent;
 @EventBusSubscriber(modid = Dead_air_pip_boy_radio_conversion.MODID)
 public final class PipLootInjection {
     private static final ResourceLocation TOWER_STRUCTURE =
-        ResourceLocation.fromNamespaceAndPath("radiotowers", "radio_tower_overrun_loot");
+        new ResourceLocation("radiotowers", "radio_tower_overrun_loot");
 
     private PipLootInjection() {}
 

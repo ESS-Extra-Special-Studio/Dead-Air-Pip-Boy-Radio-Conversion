@@ -25,26 +25,26 @@ public final class PipDeadAirLcd {
     private PipDeadAirLcd() {}
 
     public static RadioLiveDisplay.Spec specFor(PipRadioSkin skin) {
-        ResourceLocation base = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation base = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
         // Distinct from PipLiveDisplay idle ids — sharing dynamic/pip_lcd_* broke music on/off swap.
-        ResourceLocation live = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation live = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/pip_radio_lcd_" + skin.id);
         return new RadioLiveDisplay.Spec(base, live, LCD, 512, false, 90);
     }
 
     public static RadioLiveDisplay.Spec tpWristSpecFor(PipRadioSkin skin) {
-        ResourceLocation base = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation base = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
-        ResourceLocation live = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation live = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/pip_radio_lcd_tp_" + skin.id);
         return new RadioLiveDisplay.Spec(base, live, LCD, 512, false, 90);
     }
 
     public static RadioLiveDisplay.Spec gunFpWristSpecFor(PipRadioSkin skin) {
-        ResourceLocation base = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation base = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
-        ResourceLocation live = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation live = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/pip_radio_lcd_gunfp_" + skin.id);
         return new RadioLiveDisplay.Spec(base, live, LCD, 512, false, 90);
     }
