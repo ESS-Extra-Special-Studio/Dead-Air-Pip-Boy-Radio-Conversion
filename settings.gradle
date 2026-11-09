@@ -13,3 +13,9 @@ plugins {
 }
 
 rootProject.name = 'dead-air-pip-boy-radio-conversion'
+
+includeBuild('../ESC - 1.20.4 Forge') {
+    dependencySubstitution {
+        substitute module('uk.co.extraspecialstudio:extraspecialcore') using project(':')
+    }
+}

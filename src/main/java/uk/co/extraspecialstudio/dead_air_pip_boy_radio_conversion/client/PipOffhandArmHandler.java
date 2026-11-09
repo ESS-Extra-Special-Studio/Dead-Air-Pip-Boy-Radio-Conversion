@@ -137,7 +137,7 @@ public final class PipOffhandArmHandler {
     private static void renderLeftArm(
         PoseStack pose, MultiBufferSource buffer, int light, AbstractClientPlayer player
     ) {
-        RenderSystem.setShaderTexture(0, player.getSkinTextureLocation());
+        RenderSystem.setShaderTexture(0, player.getSkin().texture());
         PlayerRenderer renderer = (PlayerRenderer) Minecraft.getInstance()
             .getEntityRenderDispatcher()
             .getRenderer(player);

@@ -5,7 +5,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
-import uk.co.extraspecialstudio.dead_air.client.WalkieTalkieTuningScreen;
+import uk.co.extraspecialstudio.dead_air.client.RadioTuningScreen;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.client.PipBoyGui;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.client.PipBoyRaise;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.client.PipBoySilhouetteRenderer;
@@ -20,7 +20,7 @@ import uk.co.extraspecialstudio.extraspecial.esc.ui.EscTabBar;
  * Dead Air-backed Pip-Boy: embeds walkie tuning on the RADIO tab.
  * Only loaded when Dead Air is present.
  */
-public class PipBoyDeadAirScreen extends WalkieTalkieTuningScreen implements PipBoyGui {
+public class PipBoyDeadAirScreen extends RadioTuningScreen implements PipBoyGui {
     private static final int CHROME_PAD = 10;
     private static final int TAB_GAP = 6;
     private static final int FOOTER_H = 44;

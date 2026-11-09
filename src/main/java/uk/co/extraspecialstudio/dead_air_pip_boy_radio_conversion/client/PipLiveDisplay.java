@@ -73,12 +73,12 @@ public final class PipLiveDisplay {
     }
 
     private static ResourceLocation base(PipRadioSkin skin) {
-        return ResourceLocation.fromNamespaceAndPath(
+        return new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
     }
 
     private static ResourceLocation live(String path) {
-        return ResourceLocation.fromNamespaceAndPath(
+        return new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/" + path);
     }
 

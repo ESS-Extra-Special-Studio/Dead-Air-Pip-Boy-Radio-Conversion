@@ -141,15 +141,16 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    // Dead Air optional at runtime (compileOnly). ESC is required for PipBoyScreen / EscTabBar.
-    compileOnly fg.deobf("blank:dead_air:${dead_air_version}")
-    compileOnly fg.deobf("blank:extraspecialcore:${esc_version}")
-    // Optional: compile-only so the TACZ wrist mixin AP can resolve its target. Runtime is soft (mixin plugin).
-    compileOnly files("libs/tacz-1.20.1-1.1.8-hotfix.jar")
+    compileOnly fg.deobf("blank:dead_air:3.0.2")
+    implementation "uk.co.extraspecialstudio:extraspecialcore:${esc_version}"
+    if (file("libs/tacz-1.20.1-1.1.8-hotfix.jar").exists()) {
+        compileOnly files("libs/tacz-1.20.1-1.1.8-hotfix.jar")
+    }
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
     implementation("com.eliotlash.mclib:mclib:20")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
+
 mixin {
     add sourceSets.main, "${mod_id}.refmap.json"
     config "${mod_id}.mixins.json"
@@ -218,3 +219,20 @@ tasks.named('build').configure {
     }
 }
 
+
+
+jar {
+    archiveFileName = "${mod_id}-${version}+${minecraft_version}-forge.jar"
+}
+tasks.register('copyToSmokePack') {
+    dependsOn 'jar'
+    doLast {
+        def dest = file("${System.getProperty('user.home')}/curseforge/minecraft/Instances/ESS SMK DA 1.20.4-forge/mods")
+        if (!dest.exists()) { println "missing ${dest}"; return }
+        def built = tasks.jar.archiveFile.get().asFile
+        dest.listFiles()?.findAll { it.name.startsWith("${mod_id}-") && it.name.endsWith('.jar') }?.each { it.delete() }
+        copy { from built; into dest }
+        println "Copied ${built.name} -> ${dest}"
+    }
+}
+tasks.named('build').configure { finalizedBy 'copyToSmokePack' }

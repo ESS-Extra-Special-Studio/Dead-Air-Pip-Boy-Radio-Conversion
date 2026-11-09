@@ -17,6 +17,7 @@ import net.minecraft.world.entity.WalkAnimationState;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import org.joml.Quaternionf;
+import org.joml.Vector3f;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.Dead_air_pip_boy_radio_conversion;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.PipRadioItem;
 import uk.co.extraspecialstudio.extraspecial.esc.ui.EscRect;
@@ -330,7 +331,9 @@ public final class PipBoySilhouetteRenderer {
             entity.setXRot(pitch);
             entity.yHeadRot = bodyYaw;
             entity.yHeadRotO = bodyYaw;
-            InventoryScreen.renderEntityInInventory(graphics, x, y, scale, pose, camera, entity);
+            InventoryScreen.renderEntityInInventory(graphics, (float) x, (float) y, scale,
+                new Vector3f(), pose, camera, entity
+            );
         } finally {
             entity.yBodyRot = oldBody;
             entity.setYRot(oldY);

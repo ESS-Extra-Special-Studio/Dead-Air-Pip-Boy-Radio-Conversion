@@ -7,11 +7,11 @@ import uk.co.extraspecialstudio.dead_air.audio.AudioManager;
 import uk.co.extraspecialstudio.dead_air.client.RadioLiveDisplay;
 import uk.co.extraspecialstudio.dead_air.radio.RadioStation;
 import uk.co.extraspecialstudio.dead_air.radio.StationRegistry;
-import uk.co.extraspecialstudio.dead_air.walkie.WalkieTalkieManager;
+import uk.co.extraspecialstudio.dead_air.radio.RadioManager;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.Dead_air_pip_boy_radio_conversion;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.PipRadioItem;
 import uk.co.extraspecialstudio.dead_air_pip_boy_radio_conversion.PipRadioSkin;
-import uk.co.extraspecialstudio.dead_air.client.WalkieTalkieOverlay;
+import uk.co.extraspecialstudio.dead_air.client.RadioOverlay;
 
 import javax.annotation.Nullable;
 
@@ -25,26 +25,26 @@ public final class PipDeadAirLcd {
     private PipDeadAirLcd() {}
 
     public static RadioLiveDisplay.Spec specFor(PipRadioSkin skin) {
-        ResourceLocation base = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation base = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
         // Distinct from PipLiveDisplay idle ids — sharing dynamic/pip_lcd_* broke music on/off swap.
-        ResourceLocation live = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation live = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/pip_radio_lcd_" + skin.id);
         return new RadioLiveDisplay.Spec(base, live, LCD, 512, false, 90);
     }
 
     public static RadioLiveDisplay.Spec tpWristSpecFor(PipRadioSkin skin) {
-        ResourceLocation base = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation base = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
-        ResourceLocation live = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation live = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/pip_radio_lcd_tp_" + skin.id);
         return new RadioLiveDisplay.Spec(base, live, LCD, 512, false, 90);
     }
 
     public static RadioLiveDisplay.Spec gunFpWristSpecFor(PipRadioSkin skin) {
-        ResourceLocation base = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation base = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, skin.texturePath());
-        ResourceLocation live = ResourceLocation.fromNamespaceAndPath(
+        ResourceLocation live = new ResourceLocation(
             Dead_air_pip_boy_radio_conversion.MODID, "dynamic/pip_radio_lcd_gunfp_" + skin.id);
         return new RadioLiveDisplay.Spec(base, live, LCD, 512, false, 90);
     }
@@ -79,12 +79,12 @@ public final class PipDeadAirLcd {
         if (!on) {
             return false;
         }
-        ResourceLocation stationId = WalkieTalkieManager.getTunedStationId(stack);
+        ResourceLocation stationId = RadioManager.getTunedStationId(stack);
         RadioStation station = stationId != null ? StationRegistry.getStation(stationId) : null;
         if (station == null) {
             return false;
         }
-        float signal = WalkieTalkieOverlay.calculateSignalStrengthForStation(mc, station);
+        float signal = RadioOverlay.calculateSignalStrengthForStation(mc, station);
         if (signal < 0.05f) {
             return false;
         }
